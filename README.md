@@ -1,16 +1,41 @@
-# React + Vite
+# MoodCanvas: 내 마음의 바다
+> **바이브 코딩(Vibe Coding)을 통해 구현한 AI 감정 기록 웹 서비스**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`MoodCanvas`는 사용자의 감정을 텍스트로 기록하면 AI가 이를 분석하여 한 폭의 그림으로 그려주는 감성 일기 서비스입니다. 코드를 직접 작성하는 전통적인 방식 대신, 자연어 프롬프트로 소통하며 개발하는 **'바이브 코딩(Vibe Coding)'** 방식으로 제작되었습니다.
 
-Currently, two official plugins are available:
+##  프로젝트 핵심 컨셉
+- **심플한 바다 UI:** 고요한 바닷속을 헤엄치는 거북이 애니메이션을 통해 사용자에게 평온한 UX를 제공합니다.
+- **감정의 시각화:** 오늘 하루의 기분을 기록하면 AI 이미지를 생성하여 카드 형태로 보관합니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  기술 스택 (Tech Stack)
+- **Frontend:** `Next.js` (React Framework), `Tailwind CSS`
+- **Vibe Coding Tool:** `Antigravity` (자연어 프롬프트를 통한 코드 및 UI 생성)
+- **Backend & Auth:** `Supabase`
+  - **Authentication:** 이메일/비밀번호 기반의 사용자 인증 시스템
+  - **Database:** PostgreSQL 기반 데이터 스토리지
+- **Icons:** `Lucide-react`
 
-## React Compiler
+##  주요 구현 내용
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Antigravity를 활용한 바이브 코딩 (Vibe Coding)
+- **자연어 기반 설계:** 복잡한 UI 컴포넌트와 애니메이션(거북이 유영 효과 등)을 구체적인 프롬프트 명령어를 통해 구현했습니다.
+- **반응형 디자인:** 모바일 퍼스트(Mobile-first) 접근 방식을 통해 웹 브라우저뿐만 아니라 모바일 기기에서도 최적화된 화면을 제공합니다.
 
-## Expanding the ESLint configuration
+### 2. Supabase 백엔드 통합
+- **사용자 인증(Auth):** Supabase Auth를 연동하여 안정적인 회원가입 및 로그인 흐름을 구축했습니다.
+- **데이터베이스 설계:** 게시글 저장을 위한 테이블 스키마를 설계하고, 사용자의 UID를 기준으로 데이터를 관리합니다.
+- **보안 정책(RLS):** Row-Level Security 정책을 적용하여 사용자가 본인의 데이터에만 안전하게 접근(CRUD)할 수 있도록 보안을 강화했습니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. AI 이미지 파이프라인 구조화
+- 사용자가 입력한 일기 내용을 기반으로 외부 AI 이미지 생성 API를 호출하고, 결과물을 화면에 렌더링하는 데이터 흐름을 설계했습니다.
+
+## ✅ 프로젝트 진행 내용
+- [x] 프로젝트 기획 및 디자인 컨셉(바다/거북이) 수립
+- [x] Antigravity를 이용한 메인 화면 및 로그인/회원가입 UI 구현
+- [x] Supabase 프로젝트 생성 및 연동 (Auth & Database)
+- [x] 로그인 상태에 따른 페이지 접근 권한(Private Route) 설정
+- [x] 게시글 저장 기능 구현 및 보안 정책(RLS) 적용
+- [x] GitHub 저장소 연동 및 소스 코드 관리 시작
+
+---
+**Note:** 본 프로젝트는 개발자가 직접 코드를 타이핑하는 대신, AI와의 대화를 통해 논리를 설계하고 결과물을 만들어내는 '바이브 코딩'의 실전 사례로 제작되었습니다.
