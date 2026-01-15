@@ -27,7 +27,7 @@ const LoginPage = () => {
             if (error) throw error;
             // Successful login will be handled by the onAuthStateChange in App.jsx
         } catch (error) {
-            alert('Error logging in: ' + error.message);
+            alert('로그인 오류: ' + error.message);
         } finally {
             setLoading(false);
         }
@@ -46,13 +46,13 @@ const LoginPage = () => {
                         MoodCanvas
                     </h1>
                     <p className="text-xl font-light text-teal-100/80 tracking-widest uppercase">
-                        Inner Sea
+                        내면의 바다
                     </p>
                 </div>
 
                 <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-                    Dive into your emotions.<br />
-                    Record your daily journey in the deep sea.
+                    감정의 바다로 빠져보세요.<br />
+                    깊은 바다 속 나만의 기록을 남겨보세요.
                 </p>
             </div>
 
@@ -60,7 +60,7 @@ const LoginPage = () => {
             <div className="z-10 w-full max-w-sm space-y-4 animate-fade-in-up delay-200 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-xl">
                 <form onSubmit={handleLogin} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-teal-100 mb-1 pl-1">Email</label>
+                        <label className="block text-sm font-medium text-teal-100 mb-1 pl-1">이메일</label>
                         <input
                             type="email"
                             name="email"
@@ -73,7 +73,7 @@ const LoginPage = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-teal-100 mb-1 pl-1">Password</label>
+                        <label className="block text-sm font-medium text-teal-100 mb-1 pl-1">비밀번호</label>
                         <input
                             type="password"
                             name="password"
@@ -90,17 +90,17 @@ const LoginPage = () => {
                         disabled={loading}
                         className="w-full mt-4 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg hover:shadow-teal-500/30 hover:scale-[1.02] transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        {loading ? 'Logging In...' : 'Log In'}
+                        {loading ? '로그인 중...' : '로그인'}
                     </button>
                 </form>
 
                 <div className="text-center pt-4 border-t border-white/10 mt-6">
-                    <p className="text-sm text-teal-100/60 mb-3">Don't have an account?</p>
+                    <p className="text-sm text-teal-100/60 mb-3">계정이 없으신가요?</p>
                     <a
                         href="/signup"
                         className="inline-block w-full py-3 px-4 rounded-xl border border-white/20 hover:bg-white/5 text-teal-300 hover:text-white transition-all text-sm font-medium"
                     >
-                        Create Account
+                        회원가입
                     </a>
                 </div>
             </div>

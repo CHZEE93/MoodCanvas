@@ -6,7 +6,7 @@ import MainLayout from './components/MainLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import DiaryGrid from './components/DiaryGrid';
 import Gallery from './components/Gallery';
-import Settings from './components/Settings';
+
 import { supabase } from './lib/supabaseClient';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
     return (
       <div className="min-h-screen bg-sea-gradient flex items-center justify-center text-white flex-col gap-4">
         <div className="w-8 h-8 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
-        <p className="opacity-60 text-sm tracking-widest uppercase">Initializing Inner Sea...</p>
+        <p className="opacity-60 text-sm tracking-widest uppercase">내면의 바다를 불러오는 중...</p>
       </div>
     );
   }
@@ -74,7 +74,6 @@ VITE_SUPABASE_ANON_KEY=...`}
         <Route path="/main" element={<MainLayout />}>
           <Route index element={<DiaryGrid />} />
           <Route path="gallery" element={<Gallery />} />
-          <Route path="settings" element={<Settings />} />
         </Route>
       </Route>
 

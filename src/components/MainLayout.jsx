@@ -33,7 +33,7 @@ const MainLayout = () => {
                 <div>
                     <h1 className="text-2xl font-bold text-white tracking-wide font-sans">
                         MoodCanvas
-                        <span className="block text-xs text-sea-accent/80 font-medium mt-1 tracking-widest uppercase">Inner Sea</span>
+                        <span className="block text-xs text-sea-accent/80 font-medium mt-1 tracking-widest uppercase">내면의 바다</span>
                     </h1>
                 </div>
                 <button

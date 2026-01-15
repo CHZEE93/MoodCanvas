@@ -46,8 +46,8 @@ export default function Gallery() {
     if (images.length === 0) {
         return (
             <div className="flex flex-col items-center justify-center py-20 text-center opacity-60 min-h-[50vh]">
-                <p className="text-white text-lg font-light mb-2">No images yet.</p>
-                <p className="text-sm text-sea-accent">Create a log to see your gallery grow.</p>
+                <p className="text-white text-lg font-light mb-2">아직 기록된 이미지가 없습니다.</p>
+                <p className="text-sm text-sea-accent">오늘 하루를 기록하여 나만의 갤러리를 채워보세요.</p>
             </div>
         );
     }

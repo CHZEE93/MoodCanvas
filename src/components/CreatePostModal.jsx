@@ -43,7 +43,7 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
             onClose(); // Close modal
         } catch (error) {
             console.error('Error creating post:', error);
-            alert('Failed to save your mood. Please try again.');
+            alert('기록을 저장하는데 실패했습니다. 다시 시도해주세요.');
         } finally {
             setIsLoading(false);
         }
@@ -62,7 +62,7 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
 
                 {/* Header */}
                 <div className="flex justify-between items-center p-4 border-b border-white/10 bg-white/5">
-                    <h3 className="text-xl font-bold text-white tracking-wide">Today's Record</h3>
+                    <h3 className="text-xl font-bold text-white tracking-wide">오늘의 기록</h3>
                     <button
                         onClick={onClose}
                         disabled={isLoading}
@@ -76,13 +76,13 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
                 <div className="p-6 space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-sea-text mb-2">
-                            How are you feeling properly?
+                            지금 기분이 어떠신가요?
                         </label>
                         <textarea
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                             disabled={isLoading}
-                            placeholder="Write your thoughts here... an image will be created based on this."
+                            placeholder="당신의 생각을 적어주세요... 이를 바탕으로 이미지가 생성됩니다."
                             className="w-full h-40 bg-black/20 text-white border border-white/10 rounded-xl p-4 focus:ring-2 focus:ring-sea-accent focus:border-transparent outline-none resize-none placeholder-white/30 transition-all"
                         />
                     </div>
@@ -96,10 +96,10 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
                             {isLoading ? (
                                 <>
                                     <Loader2 className="animate-spin" size={20} />
-                                    <span>Creating memory...</span>
+                                    <span>추억을 만드는 중...</span>
                                 </>
                             ) : (
-                                <span>Save & Generate Image</span>
+                                <span>저장 및 이미지 생성</span>
                             )}
                         </button>
                     </div>

@@ -14,9 +14,8 @@ export default function BottomNav() {
     };
 
     const navItems = [
-        { path: '/main', label: 'Record', Icon: BookOpen },
-        { path: '/main/gallery', label: 'Gallery', Icon: ImageIcon },
-        { path: '/main/settings', label: 'Settings', Icon: Settings },
+        { path: '/main', label: '기록', Icon: BookOpen },
+        { path: '/main/gallery', label: '갤러리', Icon: ImageIcon },
     ];
 
     return (

@@ -48,8 +48,8 @@ export default function DiaryGrid() {
         return (
             // Empty state
             <div className="flex flex-col items-center justify-center py-20 text-center opacity-60">
-                <p className="text-white text-lg font-light mb-2">No memories yet.</p>
-                <p className="text-sm text-sea-accent">Click the pen button to write your first log.</p>
+                <p className="text-white text-lg font-light mb-2">아직 기록된 추억이 없습니다.</p>
+                <p className="text-sm text-sea-accent">펜 버튼을 눌러 첫 번째 기록을 남겨보세요.</p>
             </div>
         );
     }
